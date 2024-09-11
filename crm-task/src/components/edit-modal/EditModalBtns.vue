@@ -12,12 +12,16 @@ const { selectedContact } = storeToRefs(editModalStore)
 const contactStore = useContactStore()
 // confirmation call dispatch
 const handleConfirmation = () => {
-  selectedContact.value.id ? contactStore.editContact() : contactStore.editContact()
+  if (selectedContact.value.id) {
+    contactStore.editContact()
+  } else {
+    contactStore.addContact()
+  }
 }
 </script>
 
 <template>
-  <div id="modal-btns-wrapper" class="w-full flex flex-row justify-around py-2">
+  <div id="modal-btns-wrapper" class="w-full flex flex-row justify-center gap-5 pt-7">
     <PButton
       :label="t('shared.cancel')"
       icon="pi pi-times"
@@ -26,7 +30,7 @@ const handleConfirmation = () => {
     />
     <PButton
       :label="selectedContact.id ? t('shared.edit') : t('shared.add')"
-      icon="pi pi-scheck"
+      icon="pi pi-check"
       @click="handleConfirmation"
     />
   </div>

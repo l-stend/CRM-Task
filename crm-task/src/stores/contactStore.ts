@@ -3,6 +3,7 @@ import type { ContactItem, ContactStatus } from '@/types'
 import { useGlobalToast, useGlobalTranslate } from '@/utils/services'
 import axios from 'axios'
 import { defineStore } from 'pinia'
+import { useEditModalStore } from './editModalStore'
 
 interface ContactStoreState {
   isLoading: boolean
@@ -84,8 +85,126 @@ export const useContactStore = defineStore('contact', {
       }
     },
 
-    // i guess they could have been in the modal store too
-    async editContact() {},
-    async addContact() {}
+    // i guess add and edit calls could have been in the modal store too
+    async addContact() {
+      const editModalStore = useEditModalStore()
+      const newContact = { ...editModalStore.selectedContact }
+
+      // validate all fields are filled
+      const requiredFields: (keyof ContactItem)[] = [
+        'name',
+        'email',
+        'phone',
+        'company',
+        'status',
+        'country'
+      ]
+      const emptyFields = requiredFields.filter((field) => !newContact[field])
+
+      if (emptyFields.length > 0) {
+        // some fields are empty, show error toast
+        const toast = useGlobalToast()
+        toast.add({
+          severity: 'error',
+          summary: useGlobalTranslate('shared.error'),
+          detail: useGlobalTranslate('toasts.fillAllFieldsError'),
+          life: 3000
+        })
+        // log the empty fields for debugging and abort
+        console.error('Empty fields:', emptyFields)
+        return
+      }
+
+      try {
+        await contactListFetch.post<ContactItem>('', newContact)
+
+        // render success toast
+        const toast = useGlobalToast()
+        toast.add({
+          severity: 'success',
+          summary: useGlobalTranslate('shared.success'),
+          detail: useGlobalTranslate('toasts.addContactSuccess'),
+          life: 3000
+        })
+
+        // close modal
+        editModalStore.closeEditModal()
+
+        // refresh list
+        this.getContacts()
+      } catch (error) {
+        // render error toast
+        const toast = useGlobalToast()
+        toast.add({
+          severity: 'error',
+          summary: useGlobalTranslate('shared.error'),
+          detail: useGlobalTranslate('toasts.addContactError'),
+          life: 3000
+        })
+
+        console.error('Error adding contact:', error)
+      }
+    },
+
+    async editContact() {
+      const editModalStore = useEditModalStore()
+      const newContact = { ...editModalStore.selectedContact }
+
+      // validate all fields are filled
+      const requiredFields: (keyof ContactItem)[] = [
+        'id',
+        'name',
+        'email',
+        'phone',
+        'company',
+        'status',
+        'country'
+      ]
+      const emptyFields = requiredFields.filter((field) => !newContact[field])
+
+      if (emptyFields.length > 0) {
+        // some fields are empty, show error toast
+        const toast = useGlobalToast()
+        toast.add({
+          severity: 'error',
+          summary: useGlobalTranslate('shared.error'),
+          detail: useGlobalTranslate('toasts.fillAllFieldsError'),
+          life: 3000
+        })
+        // log the empty fields for debugging & abort
+        console.error('Empty fields:', emptyFields)
+        return
+      }
+
+      try {
+        await contactListFetch.put<ContactItem>(`/${newContact.id.toString()}`, newContact)
+
+        // render success toast
+        const toast = useGlobalToast()
+        toast.add({
+          severity: 'success',
+          summary: useGlobalTranslate('shared.success'),
+          detail: useGlobalTranslate('toasts.editContactSuccess'),
+          life: 3000
+        })
+
+        // close modal
+        editModalStore.closeEditModal()
+
+        // refresh list
+        this.getContacts()
+      } catch (error) {
+        // render error toast
+        const toast = useGlobalToast()
+        toast.add({
+          severity: 'error',
+          summary: useGlobalTranslate('shared.error'),
+          detail: useGlobalTranslate('toasts.editContactError'),
+          life: 3000
+        })
+
+        console.error('Error adding contact:', error)
+      }
+    }
   }
 })

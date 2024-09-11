@@ -14,9 +14,9 @@
       "name": "Jane Doe",
       "email": "jane.doe@example.com",
       "phone": "+44-20-7946-0958",
-      "company": "Global Ventures",
-      "status": "interested",
-      "country": "UK"
+      "company": "Global Ventures ",
+      "status": "negotiation",
+      "country": "Australia"
     },
     {
       "id": 3,
@@ -539,6 +539,24 @@
       "company": "Wilson Trading",
       "status": "contacted",
       "country": "USA"
+    },
+    {
+      "id": 61,
+      "name": "asda",
+      "email": "asdasasdsad",
+      "phone": "ddd",
+      "company": "dd",
+      "status": "customer",
+      "country": "ddd"
+    },
+    {
+      "id": 62,
+      "name": "blarere",
+      "email": "bla@gmail.com",
+      "phone": "1362345678sdada",
+      "company": "Tecchy Solutions ",
+      "status": "interested",
+      "country": "Australia"
     }
   ]
 }
