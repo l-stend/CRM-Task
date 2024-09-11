@@ -1,0 +1,544 @@
+{
+  "contact_list": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "phone": "+1-202-555-0123",
+      "company": "Tech Solutions",
+      "status": "customer",
+      "country": "USA"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "phone": "+44-20-7946-0958",
+      "company": "Global Ventures",
+      "status": "interested",
+      "country": "UK"
+    },
+    {
+      "id": 3,
+      "name": "Carlos Mendes",
+      "email": "carlos.mendes@example.com",
+      "phone": "+55-11-98123-4567",
+      "company": "Tech Solutions",
+      "status": "contacted",
+      "country": "Brazil"
+    },
+    {
+      "id": 4,
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "phone": "+61-2-9876-5432",
+      "company": "Aussie Trading",
+      "status": "customer",
+      "country": "Australia"
+    },
+    {
+      "id": 5,
+      "name": "Bob Brown",
+      "email": "bob.brown@example.com",
+      "phone": "+1-415-555-0134",
+      "company": "Global Ventures",
+      "status": "negotiation",
+      "country": "USA"
+    },
+    {
+      "id": 6,
+      "name": "Sara Müller",
+      "email": "sara.mueller@example.com",
+      "phone": "+49-30-1234-5678",
+      "company": "Berlin GmbH",
+      "status": "interested",
+      "country": "Germany"
+    },
+    {
+      "id": 7,
+      "name": "François Dubois",
+      "email": "francois.dubois@example.com",
+      "phone": "+33-1-1234-5678",
+      "company": "Tech Solutions",
+      "status": "customer",
+      "country": "France"
+    },
+    {
+      "id": 8,
+      "name": "Maria Rossi",
+      "email": "maria.rossi@example.com",
+      "phone": "+39-06-5555-1234",
+      "company": "Global Ventures",
+      "status": "contacted",
+      "country": "Italy"
+    },
+    {
+      "id": 9,
+      "name": "Yuki Nakamura",
+      "email": "yuki.nakamura@example.com",
+      "phone": "+81-3-1234-5678",
+      "company": "Nakamura Tech",
+      "status": "interested",
+      "country": "Japan"
+    },
+    {
+      "id": 10,
+      "name": "Ahmed Khan",
+      "email": "ahmed.khan@example.com",
+      "phone": "+92-21-123-4567",
+      "company": "Tech Solutions",
+      "status": "customer",
+      "country": "Pakistan"
+    },
+    {
+      "id": 11,
+      "name": "Laura Green",
+      "email": "laura.green@example.com",
+      "phone": "+1-646-555-1234",
+      "company": "Green Innovations",
+      "status": "negotiation",
+      "country": "USA"
+    },
+    {
+      "id": 12,
+      "name": "Hans Schmidt",
+      "email": "hans.schmidt@example.com",
+      "phone": "+49-89-9876-5432",
+      "company": "Munich Consulting",
+      "status": "customer",
+      "country": "Germany"
+    },
+    {
+      "id": 13,
+      "name": "Emily Johnson",
+      "email": "emily.johnson@example.com",
+      "phone": "+44-20-7946-1234",
+      "company": "Johnson Global",
+      "status": "interested",
+      "country": "UK"
+    },
+    {
+      "id": 14,
+      "name": "Miguel Torres",
+      "email": "miguel.torres@example.com",
+      "phone": "+34-91-1234-567",
+      "company": "Tech Solutions",
+      "status": "contacted",
+      "country": "Spain"
+    },
+    {
+      "id": 15,
+      "name": "Isabella Lima",
+      "email": "isabella.lima@example.com",
+      "phone": "+55-21-98765-4321",
+      "company": "Global Ventures",
+      "status": "customer",
+      "country": "Brazil"
+    },
+    {
+      "id": 16,
+      "name": "Chen Wei",
+      "email": "chen.wei@example.com",
+      "phone": "+86-10-1234-5678",
+      "company": "Beijing Tech",
+      "status": "interested",
+      "country": "China"
+    },
+    {
+      "id": 17,
+      "name": "Oliver Baker",
+      "email": "oliver.baker@example.com",
+      "phone": "+1-312-555-0123",
+      "company": "Baker Industries",
+      "status": "negotiation",
+      "country": "USA"
+    },
+    {
+      "id": 18,
+      "name": "Sofia Petrova",
+      "email": "sofia.petrova@example.com",
+      "phone": "+7-495-123-4567",
+      "company": "Global Ventures",
+      "status": "customer",
+      "country": "Russia"
+    },
+    {
+      "id": 19,
+      "name": "Pedro Alvarez",
+      "email": "pedro.alvarez@example.com",
+      "phone": "+52-55-1234-5678",
+      "company": "Tech Solutions",
+      "status": "interested",
+      "country": "Mexico"
+    },
+    {
+      "id": 20,
+      "name": "Elena Dimitrova",
+      "email": "elena.dimitrova@example.com",
+      "phone": "+359-2-1234-5678",
+      "company": "Global Ventures",
+      "status": "contacted",
+      "country": "Bulgaria"
+    },
+    {
+      "id": 21,
+      "name": "Paul Walker",
+      "email": "paul.walker@example.com",
+      "phone": "+1-702-555-1234",
+      "company": "Walker Industries",
+      "status": "customer",
+      "country": "USA"
+    },
+    {
+      "id": 22,
+      "name": "Lily White",
+      "email": "lily.white@example.com",
+      "phone": "+61-3-9876-5432",
+      "company": "White Holdings",
+      "status": "interested",
+      "country": "Australia"
+    },
+    {
+      "id": 23,
+      "name": "Nina Ivanova",
+      "email": "nina.ivanova@example.com",
+      "phone": "+7-812-123-4567",
+      "company": "Ivanova Trading",
+      "status": "negotiation",
+      "country": "Russia"
+    },
+    {
+      "id": 24,
+      "name": "David Kim",
+      "email": "david.kim@example.com",
+      "phone": "+82-2-1234-5678",
+      "company": "Seoul Enterprises",
+      "status": "customer",
+      "country": "South Korea"
+    },
+    {
+      "id": 25,
+      "name": "Sophia Lopez",
+      "email": "sophia.lopez@example.com",
+      "phone": "+52-55-9876-5432",
+      "company": "Tech Solutions",
+      "status": "interested",
+      "country": "Mexico"
+    },
+    {
+      "id": 26,
+      "name": "Omar Hassan",
+      "email": "omar.hassan@example.com",
+      "phone": "+971-4-555-1234",
+      "company": "Global Ventures",
+      "status": "contacted",
+      "country": "UAE"
+    },
+    {
+      "id": 27,
+      "name": "Anna Taylor",
+      "email": "anna.taylor@example.com",
+      "phone": "+1-213-555-6789",
+      "company": "Taylor Innovations",
+      "status": "customer",
+      "country": "USA"
+    },
+    {
+      "id": 28,
+      "name": "Yu Chen",
+      "email": "yu.chen@example.com",
+      "phone": "+86-21-9876-5432",
+      "company": "Shanghai Ventures",
+      "status": "interested",
+      "country": "China"
+    },
+    {
+      "id": 29,
+      "name": "Fatima Abdullah",
+      "email": "fatima.abdullah@example.com",
+      "phone": "+966-11-555-6789",
+      "company": "Tech Solutions",
+      "status": "negotiation",
+      "country": "Saudi Arabia"
+    },
+    {
+      "id": 30,
+      "name": "Victor Nogueira",
+      "email": "victor.nogueira@example.com",
+      "phone": "+351-21-1234-5678",
+      "company": "Global Ventures",
+      "status": "customer",
+      "country": "Portugal"
+    },
+    {
+      "id": 31,
+      "name": "Emily Brown",
+      "email": "emily.brown@example.com",
+      "phone": "+1-646-555-7890",
+      "company": "Global Ventures",
+      "status": "contacted",
+      "country": "USA"
+    },
+    {
+      "id": 32,
+      "name": "Oliver Smith",
+      "email": "oliver.smith@example.com",
+      "phone": "+44-20-7946-7890",
+      "company": "Tech Solutions",
+      "status": "negotiation",
+      "country": "UK"
+    },
+    {
+      "id": 33,
+      "name": "Gabriela Silva",
+      "email": "gabriela.silva@example.com",
+      "phone": "+55-11-91234-5678",
+      "company": "Silva & Partners",
+      "status": "customer",
+      "country": "Brazil"
+    },
+    {
+      "id": 34,
+      "name": "Anwar Mahmoud",
+      "email": "anwar.mahmoud@example.com",
+      "phone": "+20-2-2345-6789",
+      "company": "Cairo Consulting",
+      "status": "interested",
+      "country": "Egypt"
+    },
+    {
+      "id": 35,
+      "name": "Maria Gonçalves",
+      "email": "maria.goncalves@example.com",
+      "phone": "+351-22-5432-0987",
+      "company": "Global Ventures",
+      "status": "contacted",
+      "country": "Portugal"
+    },
+    {
+      "id": 36,
+      "name": "Jacob Lee",
+      "email": "jacob.lee@example.com",
+      "phone": "+82-2-2345-6789",
+      "company": "Seoul Enterprises",
+      "status": "customer",
+      "country": "South Korea"
+    },
+    {
+      "id": 37,
+      "name": "Tanya Patel",
+      "email": "tanya.patel@example.com",
+      "phone": "+91-22-1234-5678",
+      "company": "Mumbai Enterprises",
+      "status": "negotiation",
+      "country": "India"
+    },
+    {
+      "id": 38,
+      "name": "Lucas Hernández",
+      "email": "lucas.hernandez@example.com",
+      "phone": "+34-91-7654-321",
+      "company": "Tech Solutions",
+      "status": "interested",
+      "country": "Spain"
+    },
+    {
+      "id": 39,
+      "name": "Sophie Dubois",
+      "email": "sophie.dubois@example.com",
+      "phone": "+33-1-7654-3210",
+      "company": "Global Ventures",
+      "status": "customer",
+      "country": "France"
+    },
+    {
+      "id": 40,
+      "name": "Felipe Martínez",
+      "email": "felipe.martinez@example.com",
+      "phone": "+52-55-9876-5432",
+      "company": "Tech Solutions",
+      "status": "contacted",
+      "country": "Mexico"
+    },
+    {
+      "id": 41,
+      "name": "Isabel Romero",
+      "email": "isabel.romero@example.com",
+      "phone": "+34-93-1234-5678",
+      "company": "Romero & Co.",
+      "status": "customer",
+      "country": "Spain"
+    },
+    {
+      "id": 42,
+      "name": "Nathan Clark",
+      "email": "nathan.clark@example.com",
+      "phone": "+44-20-5555-9876",
+      "company": "Clark Enterprises",
+      "status": "interested",
+      "country": "UK"
+    },
+    {
+      "id": 43,
+      "name": "Amara Singh",
+      "email": "amara.singh@example.com",
+      "phone": "+91-11-2345-6789",
+      "company": "Delhi Consultants",
+      "status": "negotiation",
+      "country": "India"
+    },
+    {
+      "id": 44,
+      "name": "Alex Johnson",
+      "email": "alex.johnson@example.com",
+      "phone": "+1-212-555-1234",
+      "company": "Johnson Global",
+      "status": "customer",
+      "country": "USA"
+    },
+    {
+      "id": 45,
+      "name": "Chen Liang",
+      "email": "chen.liang@example.com",
+      "phone": "+86-10-9876-5432",
+      "company": "Beijing Tech",
+      "status": "contacted",
+      "country": "China"
+    },
+    {
+      "id": 46,
+      "name": "Santiago Pereira",
+      "email": "santiago.pereira@example.com",
+      "phone": "+55-21-1234-5678",
+      "company": "Global Ventures",
+      "status": "interested",
+      "country": "Brazil"
+    },
+    {
+      "id": 47,
+      "name": "Lina Meier",
+      "email": "lina.meier@example.com",
+      "phone": "+49-40-5432-8765",
+      "company": "Meier GmbH",
+      "status": "customer",
+      "country": "Germany"
+    },
+    {
+      "id": 48,
+      "name": "Owen Davis",
+      "email": "owen.davis@example.com",
+      "phone": "+1-818-555-4321",
+      "company": "Tech Solutions",
+      "status": "negotiation",
+      "country": "USA"
+    },
+    {
+      "id": 49,
+      "name": "Karla Novak",
+      "email": "karla.novak@example.com",
+      "phone": "+385-1-2345-678",
+      "company": "Global Ventures",
+      "status": "interested",
+      "country": "Croatia"
+    },
+    {
+      "id": 50,
+      "name": "Mikhail Ivanov",
+      "email": "mikhail.ivanov@example.com",
+      "phone": "+7-495-7654-3210",
+      "company": "Ivanov Trading",
+      "status": "customer",
+      "country": "Russia"
+    },
+    {
+      "id": 51,
+      "name": "Mei Zhang",
+      "email": "mei.zhang@example.com",
+      "phone": "+86-21-8765-4321",
+      "company": "Shanghai Ventures",
+      "status": "contacted",
+      "country": "China"
+    },
+    {
+      "id": 52,
+      "name": "Hassan Al-Farsi",
+      "email": "hassan.al-farsi@example.com",
+      "phone": "+971-4-8765-4321",
+      "company": "Global Ventures",
+      "status": "negotiation",
+      "country": "UAE"
+    },
+    {
+      "id": 53,
+      "name": "Sophia Edwards",
+      "email": "sophia.edwards@example.com",
+      "phone": "+44-161-555-1234",
+      "company": "Edwards & Sons",
+      "status": "customer",
+      "country": "UK"
+    },
+    {
+      "id": 54,
+      "name": "Leonardo Costa",
+      "email": "leonardo.costa@example.com",
+      "phone": "+55-11-9876-5432",
+      "company": "Tech Solutions",
+      "status": "interested",
+      "country": "Brazil"
+    },
+    {
+      "id": 55,
+      "name": "Amina Bah",
+      "email": "amina.bah@example.com",
+      "phone": "+221-33-123-4567",
+      "company": "Dakar Consulting",
+      "status": "contacted",
+      "country": "Senegal"
+    },
+    {
+      "id": 56,
+      "name": "Mateo Alvarez",
+      "email": "mateo.alvarez@example.com",
+      "phone": "+52-33-1234-5678",
+      "company": "Global Ventures",
+      "status": "customer",
+      "country": "Mexico"
+    },
+    {
+      "id": 57,
+      "name": "Liam Moore",
+      "email": "liam.moore@example.com",
+      "phone": "+1-310-555-6789",
+      "company": "Moore Tech",
+      "status": "negotiation",
+      "country": "USA"
+    },
+    {
+      "id": 58,
+      "name": "Irina Popescu",
+      "email": "irina.popescu@example.com",
+      "phone": "+40-21-7654-3210",
+      "company": "Global Ventures",
+      "status": "interested",
+      "country": "Romania"
+    },
+    {
+      "id": 59,
+      "name": "Omar Aziz",
+      "email": "omar.aziz@example.com",
+      "phone": "+20-2-5432-9876",
+      "company": "Cairo Consulting",
+      "status": "customer",
+      "country": "Egypt"
+    },
+    {
+      "id": 60,
+      "name": "Zoe Wilson",
+      "email": "zoe.wilson@example.com",
+      "phone": "+1-212-555-6789",
+      "company": "Wilson Trading",
+      "status": "contacted",
+      "country": "USA"
+    }
+  ]
+}
