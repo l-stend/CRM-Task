@@ -7,7 +7,7 @@ import { defineStore } from 'pinia'
 interface ContactStoreState {
   isLoading: boolean
   contactList: ContactItem[]
-  totalCountUsers: number
+  pagesCount: number
   currentPage: number
   perPage: number
   activeFilters: ContactStatus[]
@@ -16,9 +16,9 @@ interface ContactStoreState {
 const initialState: ContactStoreState = {
   isLoading: false,
   contactList: [],
-  totalCountUsers: 0,
+  pagesCount: 0,
   currentPage: 1,
-  perPage: 20,
+  perPage: 15,
   activeFilters: ['customer', 'interested']
 }
 
@@ -49,9 +49,11 @@ export const useContactStore = defineStore('contact', {
           params
         })
 
-        // set the contact list and the total count of contacts from headers
+        // set the contact list and the total count pages
         this.contactList = response.data
-        this.totalCountUsers = parseInt(response.headers['x-total-count'], 10)
+
+        const totalItems = parseInt(response.headers['x-total-count'], 10)
+        this.pagesCount = Math.ceil(totalItems / this.perPage)
       } catch (error) {
         // render error toast
         const toast = useGlobalToast()
