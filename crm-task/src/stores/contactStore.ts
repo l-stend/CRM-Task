@@ -19,7 +19,7 @@ const initialState: ContactStoreState = {
   totalCountUsers: 0,
   currentPage: 1,
   perPage: 20,
-  activeFilters: ['customer', 'interested', 'negotiation', 'contacted']
+  activeFilters: ['customer', 'interested']
 }
 
 export const useContactStore = defineStore('contact', {
@@ -29,16 +29,23 @@ export const useContactStore = defineStore('contact', {
       // set loading to true
       this.isLoading = true
 
+      // configure params
       const params: {
         _page: number
         _limit: number
+        status?: string
       } = {
         _page: this.currentPage,
         _limit: this.perPage
       }
 
+      // add status filter if activeFilters are present
+      if (this.activeFilters.length > 0) {
+        params.status = this.activeFilters.join('|')
+      }
+
       try {
-        const response = await contactListFetch.get<ContactItem[]>('45345', {
+        const response = await contactListFetch.get<ContactItem[]>('', {
           params
         })
 
