@@ -1,6 +1,10 @@
 export default {
   shared: {
-    error: 'Error'
+    error: 'Error',
+    customer: 'Customer',
+    contacted: 'Contacted',
+    interested: 'Interested',
+    negotiation: 'Negotiation'
   },
   toasts: {
     getContactListError: 'Something went wrong while loading contacts'
@@ -14,5 +18,9 @@ export default {
       country: 'Country',
       actions: 'Actions'
     }
+  },
+  console: {
+    filterHeader: 'Toggle contact status',
+    langSwitch: 'Switch to german'
   }
 }

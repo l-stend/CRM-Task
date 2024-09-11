@@ -25,6 +25,20 @@ const initialState: ContactStoreState = {
 export const useContactStore = defineStore('contact', {
   state: () => initialState as ContactStoreState,
   actions: {
+    toggleFilter(status: ContactStatus) {
+      const index = this.activeFilters.indexOf(status)
+      if (index === -1) {
+        // add filter if not there
+        this.activeFilters.push(status)
+      } else {
+        // remove if already toggled
+        this.activeFilters.splice(index, 1)
+      }
+
+      // refresh contact list
+      this.getContacts()
+    },
+
     async getContacts() {
       // set loading to true
       this.isLoading = true
