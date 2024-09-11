@@ -17,9 +17,11 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.0.6",
+    "axios": "^1.7.7",
     "pinia": "^2.1.7",
     "primevue": "^4.0.6",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue-i18n": "^10.0.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
