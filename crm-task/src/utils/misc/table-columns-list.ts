@@ -1,9 +1,9 @@
 import type { TableColumn } from '@/types'
 
 export const tableColumnsList: TableColumn[] = [
-  { field: 'name', header: 'Name', sortable: true },
-  { field: 'email', header: 'Email', sortable: true },
-  { field: 'phone', header: 'Phone', sortable: false },
-  { field: 'company', header: 'Company', sortable: true },
-  { field: 'country', header: 'Country', sortable: true }
+  { field: 'name', header: 'name', sortable: true },
+  { field: 'email', header: 'email', sortable: true },
+  { field: 'phone', header: 'phone', sortable: false },
+  { field: 'company', header: 'company', sortable: true },
+  { field: 'country', header: 'country', sortable: true }
 ]

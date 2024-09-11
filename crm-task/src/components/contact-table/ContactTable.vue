@@ -9,6 +9,9 @@ import { useContactStore } from '../../stores'
 import { tableColumnsList } from '@/utils/misc/table-columns-list'
 import TablePagination from './TablePagination.vue'
 import type { ContactStatus } from '@/types'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const contactsStore = useContactStore()
 const { contactList } = storeToRefs(contactsStore)
@@ -47,7 +50,7 @@ const getBadgeColor = (status: ContactStatus): string => {
       v-for="col of tableColumnsList"
       :key="col.field"
       :field="col.field"
-      :header="col.header"
+      :header="t('table.headers.' + col.header)"
       :sortable="col.sortable"
     ></Column>
 
@@ -57,7 +60,7 @@ const getBadgeColor = (status: ContactStatus): string => {
       </template>
     </Column>
 
-    <Column header="actions" field="id">
+    <Column :header="t('table.headers.actions')" field="id">
       <template #body="slotProps">
         <div class="w-full flex flex-row">
           <Button

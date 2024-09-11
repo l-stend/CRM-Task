@@ -10,9 +10,9 @@ const { isLoading } = storeToRefs(contactsStore)
 
 <template>
   <main class="min-h-screen grid grid-cols-12 light-theme">
-    <section class="col-span-3 min-h-screen">aaa</section>
+    <section class="col-span-2 min-h-screen">aaa</section>
 
-    <section class="col-span-9 min-h-screen flex flex-col justify-center items-center p-5">
+    <section class="col-span-10 min-h-screen flex flex-col justify-center items-center p-5">
       <PProgressSpinner v-if="isLoading" />
       <ContactTable v-else />
     </section>
