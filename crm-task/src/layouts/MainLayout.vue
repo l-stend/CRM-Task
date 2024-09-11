@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ContactTable, TableConsole } from '@/components'
+import { ContactTable, TableConsole, EditModal } from '@/components'
 import { useContactStore } from '@/stores'
 import { storeToRefs } from 'pinia'
 import PProgressSpinner from 'primevue/progressspinner'
@@ -9,8 +9,8 @@ const { isLoading } = storeToRefs(contactsStore)
 </script>
 
 <template>
-  <main class="min-h-screen grid grid-cols-12 light-theme">
-    <section class="col-span-2 min-h-screen">
+  <main class="min-h-screen grid grid-cols-12 light-theme py-2 px-2">
+    <section class="col-span-2 min-h-screen bg-gray-100 rounded-lg">
       <TableConsole />
     </section>
 
@@ -19,6 +19,8 @@ const { isLoading } = storeToRefs(contactsStore)
       <ContactTable v-else />
     </section>
   </main>
+
+  <EditModal />
 </template>
 
 <style scoped>

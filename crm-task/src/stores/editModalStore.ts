@@ -14,5 +14,14 @@ const initialState: EditModalStoreState = {
 
 export const useEditModalStore = defineStore('edit-modal', {
   state: () => initialState as EditModalStoreState,
-  actions: {}
+  actions: {
+    openEditModal(contact: ContactItem) {
+      this.selectedContact = JSON.parse(JSON.stringify(contact))
+      this.isModalOpen = true
+    },
+    closeEditModal() {
+      this.selectedContact = blankContact
+      this.isModalOpen = false
+    }
+  }
 })

@@ -4,7 +4,7 @@ import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
 import Button from 'primevue/button'
 import Tag from 'primevue/tag'
-import { useContactStore } from '../../stores'
+import { useContactStore, useEditModalStore } from '../../stores'
 // can't find the type from primevue
 import { tableColumnsList } from '@/utils/misc/table-columns-list'
 import TablePagination from './TablePagination.vue'
@@ -13,6 +13,7 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
+// hadnle table content
 const contactsStore = useContactStore()
 const { contactList } = storeToRefs(contactsStore)
 
@@ -34,6 +35,9 @@ const getBadgeColor = (status: ContactStatus): string => {
       return 'contrast'
   }
 }
+
+// handle edit modal
+const editModalStore = useEditModalStore()
 </script>
 
 <template>
@@ -64,7 +68,7 @@ const getBadgeColor = (status: ContactStatus): string => {
       <template #body="slotProps">
         <div class="w-full flex flex-row">
           <Button
-            @click="() => console.log(slotProps)"
+            @click="editModalStore.openEditModal(slotProps.data)"
             icon="pi pi-user-edit"
             outlined
             size="small"

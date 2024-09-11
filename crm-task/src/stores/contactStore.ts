@@ -82,6 +82,10 @@ export const useContactStore = defineStore('contact', {
       } finally {
         this.isLoading = false
       }
-    }
+    },
+
+    // i guess they could have been in the modal store too
+    async editContact() {},
+    async addContact() {}
   }
 })
