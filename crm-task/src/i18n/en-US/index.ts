@@ -1,3 +1,8 @@
 export default {
-  bla: 'uhiiiiiiiiiiiii'
+  shared: {
+    error: 'Error'
+  },
+  toasts: {
+    getContactListError: 'Something went wrong while loading contacts'
+  }
 }
