@@ -1,10 +1,8 @@
 import { contactListFetch } from '@/axios/contact-list-fetch'
 import type { ContactItem, ContactStatus } from '@/types'
 import { useGlobalToast, useGlobalTranslate } from '@/utils/services'
-import axios from 'axios'
 import { defineStore } from 'pinia'
 import { useEditModalStore } from './editModalStore'
-import { list } from 'postcss'
 
 interface ContactStoreState {
   isLoading: boolean
@@ -21,7 +19,7 @@ const initialState: ContactStoreState = {
   pagesCount: 0,
   currentPage: 1,
   perPage: 15,
-  activeFilters: ['customer', 'interested']
+  activeFilters: ['customer', 'negotiation']
 }
 
 export const useContactStore = defineStore('contact', {
