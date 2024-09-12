@@ -75,7 +75,7 @@ const editModalStore = useEditModalStore()
             class="mx-1"
           />
           <Button
-            @click="() => console.log(slotProps)"
+            @click="contactsStore.deleteContact(slotProps.data.id)"
             icon="pi pi-trash"
             outlined
             size="small"

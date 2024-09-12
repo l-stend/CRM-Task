@@ -4,6 +4,7 @@ import { useGlobalToast, useGlobalTranslate } from '@/utils/services'
 import axios from 'axios'
 import { defineStore } from 'pinia'
 import { useEditModalStore } from './editModalStore'
+import { list } from 'postcss'
 
 interface ContactStoreState {
   isLoading: boolean
@@ -87,6 +88,9 @@ export const useContactStore = defineStore('contact', {
 
     // i guess add and edit calls could have been in the modal store too
     async addContact() {
+      // set loading to true
+      this.isLoading = true
+
       const editModalStore = useEditModalStore()
       const newContact = { ...editModalStore.selectedContact }
 
@@ -130,7 +134,8 @@ export const useContactStore = defineStore('contact', {
         // close modal
         editModalStore.closeEditModal()
 
-        // refresh list
+        // go to last page and refresh list
+        this.currentPage = this.pagesCount
         this.getContacts()
       } catch (error) {
         // render error toast
@@ -143,10 +148,15 @@ export const useContactStore = defineStore('contact', {
         })
 
         console.error('Error adding contact:', error)
+      } finally {
+        this.isLoading = false
       }
     },
 
     async editContact() {
+      // set loading to true
+      this.isLoading = true
+
       const editModalStore = useEditModalStore()
       const newContact = { ...editModalStore.selectedContact }
 
@@ -204,6 +214,49 @@ export const useContactStore = defineStore('contact', {
         })
 
         console.error('Error adding contact:', error)
+      } finally {
+        this.isLoading = false
+      }
+    },
+
+    async deleteContact(contactId: number) {
+      // set loading to true
+      this.isLoading = true
+
+      try {
+        await contactListFetch.delete(`/${contactId}`)
+
+        // check if is latest item on page
+        const isLastOnPage = this.contactList.length === 1 && this.currentPage > 1
+
+        if (isLastOnPage) {
+          this.currentPage--
+        }
+
+        // refresh the contact list
+        this.getContacts()
+
+        // render success toast
+        const toast = useGlobalToast()
+        toast.add({
+          severity: 'success',
+          summary: useGlobalTranslate('shared.success'),
+          detail: useGlobalTranslate('toasts.deleteContactSuccess'),
+          life: 3000
+        })
+      } catch (error) {
+        // render error toast
+        const toast = useGlobalToast()
+        toast.add({
+          severity: 'error',
+          summary: useGlobalTranslate('shared.error'),
+          detail: useGlobalTranslate('toasts.deleteContactError'),
+          life: 3000
+        })
+
+        console.error('Error deleting contact:', error)
+      } finally {
+        this.isLoading = false
       }
     }
   }

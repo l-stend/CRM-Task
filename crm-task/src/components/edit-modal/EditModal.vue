@@ -27,7 +27,13 @@ const { t } = useI18n()
     :closable="false"
     class="px-2"
   >
-    <PProgressSpinner v-if="isLoading" />
+    <div
+      v-if="isLoading"
+      id="modal-spinner-wrapper"
+      class="w-full flex flex-row justify-center py-5"
+    >
+      <PProgressSpinner />
+    </div>
     <EditModalForm v-else />
 
     <EditModalBtns />

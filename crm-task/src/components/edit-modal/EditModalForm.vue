@@ -3,7 +3,7 @@ import { useEditModalStore } from '@/stores'
 import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
 import PInputText from 'primevue/inputtext'
-import PSelect, { type SelectProps } from 'primevue/select'
+import PSelect from 'primevue/select'
 import type { ContactStatus } from '@/types'
 
 // handle from entries

@@ -10,7 +10,14 @@ export default {
     add: 'Add'
   },
   toasts: {
-    getContactListError: 'Something went wrong while loading contacts'
+    getContactListError: 'Something went wrong while loading contacts',
+    fillAllFieldsError: 'All the fields must be filled',
+    addContactSuccess: 'Contact successfully created',
+    addContactError: 'Something went wrong while creating the contact',
+    editContactSuccess: 'Contact successfully edited',
+    editContactError: 'Something went wrong while editing the contact',
+    deleteContactSuccess: 'Contact successfully deleted',
+    deleteContactError: 'Something went wrong while deleting the contact'
   },
   table: {
     headers: {

@@ -86,7 +86,7 @@
       "name": "Ahmed Khan",
       "email": "ahmed.khan@example.com",
       "phone": "+92-21-123-4567",
-      "company": "Tech Solutions",
+      "company": "Tech Solutions Corp",
       "status": "customer",
       "country": "Pakistan"
     },
@@ -542,20 +542,11 @@
     },
     {
       "id": 61,
-      "name": "asda",
-      "email": "asdasasdsad",
-      "phone": "ddd",
-      "company": "dd",
-      "status": "customer",
-      "country": "ddd"
-    },
-    {
-      "id": 62,
-      "name": "blarere",
-      "email": "bla@gmail.com",
-      "phone": "1362345678sdada",
-      "company": "Tecchy Solutions ",
-      "status": "interested",
+      "name": "test",
+      "email": "test@gmail.com",
+      "phone": "123456789",
+      "company": "test corp",
+      "status": "contacted",
       "country": "Australia"
     }
   ]
