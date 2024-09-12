@@ -32,7 +32,7 @@ const editModalStore = useEditModalStore()
     id="table-console-wrapper"
     class="w-full flex flex-col justify-start items-start pt-10 px-3 gap-5"
   >
-    <p class="font-bold text-lg">{{ t('console.filterHeader') }}</p>
+    <p class="font-bold text-lg" data-cy="filters-header">{{ t('console.filterHeader') }}</p>
 
     <PDivider />
 
@@ -45,6 +45,7 @@ const editModalStore = useEditModalStore()
         :outlined="!activeFilters.includes(opt)"
         class="w-full"
         :icon="activeFilters.includes(opt) ? 'pi pi-filter' : 'pi pi-filter-slash'"
+        :data-cy="'filter-btn-' + opt"
       />
     </div>
 
@@ -54,12 +55,14 @@ const editModalStore = useEditModalStore()
       :label="t('console.addContact')"
       icon="pi pi-plus"
       @click="editModalStore.openEditModal(blankContact)"
+      data-cy="add-modal-btn"
     />
     <PButton
       :label="t('console.langSwitch')"
       icon="pi pi-language"
       text
       @click="handleLangToggle"
+      data-cy="lang-toggle-btn"
     />
   </div>
 </template>

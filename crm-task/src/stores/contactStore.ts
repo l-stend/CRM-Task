@@ -114,6 +114,7 @@ export const useContactStore = defineStore('contact', {
         })
         // log the empty fields for debugging and abort
         console.error('Empty fields:', emptyFields)
+        this.isLoading = false
         return
       }
 
@@ -181,6 +182,7 @@ export const useContactStore = defineStore('contact', {
         })
         // log the empty fields for debugging & abort
         console.error('Empty fields:', emptyFields)
+        this.isLoading = false
         return
       }
 

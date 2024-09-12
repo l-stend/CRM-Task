@@ -32,6 +32,7 @@ const handleConfirmation = () => {
       :label="selectedContact.id ? t('shared.edit') : t('shared.add')"
       icon="pi pi-check"
       @click="handleConfirmation"
+      data-cy="edit-modal-confirmation-btn"
     />
   </div>
 </template>

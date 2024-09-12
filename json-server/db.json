@@ -39,7 +39,7 @@
     {
       "id": 5,
       "name": "Bob Brown",
-      "email": "bob.brown@example.com",
+      "email": "bob.brown@example.comma",
       "phone": "+1-415-555-0134",
       "company": "Global Ventures",
       "status": "negotiation",

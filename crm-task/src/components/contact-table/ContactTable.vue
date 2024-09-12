@@ -56,11 +56,16 @@ const editModalStore = useEditModalStore()
       :field="col.field"
       :header="t('table.headers.' + col.header)"
       :sortable="col.sortable"
+      :data-cy="'column-header-' + col.field"
     ></Column>
 
     <Column header="Status" field="status">
       <template #body="slotProps">
-        <Tag :value="slotProps.data.status" :severity="getBadgeColor(slotProps.data.status)" />
+        <Tag
+          :value="slotProps.data.status"
+          :severity="getBadgeColor(slotProps.data.status)"
+          :data-cy="'status-badge-' + slotProps.data.id"
+        />
       </template>
     </Column>
 
@@ -73,6 +78,7 @@ const editModalStore = useEditModalStore()
             outlined
             size="small"
             class="mx-1"
+            :data-cy="'edit-contact-btn-' + slotProps.data.id"
           />
           <Button
             @click="contactsStore.deleteContact(slotProps.data.id)"
@@ -80,6 +86,7 @@ const editModalStore = useEditModalStore()
             outlined
             size="small"
             class="mx-1"
+            :data-cy="'delete-contact-btn-' + slotProps.data.id"
           />
         </div>
       </template>

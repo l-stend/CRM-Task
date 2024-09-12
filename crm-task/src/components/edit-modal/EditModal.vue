@@ -26,6 +26,7 @@ const { t } = useI18n()
     :style="{ width: '40vw' }"
     :closable="false"
     class="px-2"
+    data-cy="edit-modal"
   >
     <div
       v-if="isLoading"

@@ -31,7 +31,7 @@ const statusOptions: { label: string; value: ContactStatus }[] = [
     <!-- email-->
     <div class="w-full flex flex-col gap-2">
       <label for="email">{{ t('modal.form.email') }}</label>
-      <PInputText id="email" v-model="selectedContact.email" />
+      <PInputText id="email" v-model="selectedContact.email" data-cy="edit-modal-email-field" />
     </div>
     <!-- phone -->
     <div class="w-full flex flex-col gap-2">
